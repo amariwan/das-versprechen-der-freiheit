@@ -1,0 +1,238 @@
+version: 3.2-research
+as_of: '2026-11-16'
+important: Web-Beobachtung ist keine bytegenau archivierte Rohquelle oder menschlich freigegebene Quellenprüfung
+sources:
+- id: PT01
+  country: Portugal
+  source_type: archival_summary
+  title: MFA-Programm 1974; archivierte Zusammenfassung
+  url: https://cd25a.uc.pt/pt/page/774
+  source_date: 26.04.1974/14.05.1974
+  locator: Maßnahmenliste; Wahl zur Verfassunggebenden Versammlung, Amnestie, Ende der Zensur
+  limits: Universitätsarchiv als Zusammenfassung, Originalscan nachbeschaffen
+  verified_by: Webabruf in dieser Forschungsrunde
+  verification_status: web_read
+  raw_archived: false
+  raw_sha256: null
+  independent_quote_review: false
+- id: PT02
+  country: Portugal
+  source_type: primary
+  title: Constituição da República Portuguesa, ursprüngliche Fassung 1976
+  url: https://diariodarepublica.pt/dr/detalhe/decreto-aprovacao-constituicao/1976-502635
+  source_date: 02.04.1976, publiziert 10.04.1976
+  locator: Präambel, Art. 1–3; Pluralismus und Sozialismusziel
+  limits: Historische Erstfassung explizit verwenden; nicht konsolidierte Fassung
+  verified_by: Webabruf in dieser Forschungsrunde
+  verification_status: web_read
+  raw_archived: false
+  raw_sha256: null
+  independent_quote_review: false
+- id: PT03
+  country: Portugal
+  source_type: primary
+  title: Assembleia da República, Verfassung in Erstfassung (PDF)
+  url: https://www.parlamento.pt/Parlamento/Documents/CRP1976.pdf
+  source_date: 02.04.1976
+  locator: Originalversion und Seiten im PDF
+  limits: Text und Gesetzesportal PT02 parallel prüfen
+  verified_by: Webabruf in dieser Forschungsrunde
+  verification_status: web_read
+  raw_archived: false
+  raw_sha256: null
+  independent_quote_review: false
+- id: PT04
+  country: Portugal
+  source_type: official_statistics
+  title: 'Wahlverwaltung: historische Wahldaten 1975'
+  url: https://agc.sg.mai.gov.pt/media/Contextos_aut_pres.pdf
+  source_date: 25.04.1975
+  locator: Eleições Constituintes de 1975; 6.231.372 / 5.711.829; 91,66%; Sitzangaben
+  limits: PDF ist retrospektive offizielle Statistik
+  verified_by: Webabruf in dieser Forschungsrunde
+  verification_status: web_read
+  raw_archived: false
+  raw_sha256: null
+  independent_quote_review: false
+- id: PT05
+  country: Portugal
+  source_type: official_statistics
+  title: 'CNE: Assembleia Constituinte 1975'
+  url: https://www.cne.pt/content/eleicoes-para-assembleia-constituinte-1975
+  source_date: 25.04.1975
+  locator: Wahltag und amtlicher Ergebnisverweis
+  limits: Amtliches Endergebnis auf verlinkter Karte noch archivieren
+  verified_by: Webabruf in dieser Forschungsrunde
+  verification_status: web_read
+  raw_archived: false
+  raw_sha256: null
+  independent_quote_review: false
+- id: PT06
+  country: Portugal
+  source_type: academic_public
+  title: 'Parlament 2025: Geschichte des Verfassungsorgans'
+  url: https://www.parlamento.pt/ArquivoDocumentacao/Documents/Como-funciona-o-Parlamento.pdf
+  source_date: '2025'
+  locator: Kapitel historische Entstehung; 250 Sitze; 91,66%
+  limits: Historische institutionelle Darstellung
+  verified_by: Webabruf in dieser Forschungsrunde
+  verification_status: web_read
+  raw_archived: false
+  raw_sha256: null
+  independent_quote_review: false
+- id: PT07
+  country: Portugal
+  source_type: primary_archive
+  title: 'Archiv des Präsidenten: MFA 1975 Verfassungspakte'
+  url: https://www.arquivo.presidencia.pt/details?detailsType=Description&ht=governo&id=32743
+  source_date: 1975–1976
+  locator: 1. und 2. MFA-Parteienpakt, Verfassungsentwicklung
+  limits: Archivalische Beschreibung ist nicht das Originaldokument
+  verified_by: Webabruf in dieser Forschungsrunde
+  verification_status: web_read
+  raw_archived: false
+  raw_sha256: null
+  independent_quote_review: false
+- id: IR01
+  country: Iran
+  source_type: translated_primary
+  title: 'Iranische Verfassung 1979: Foundation for Iranian Studies'
+  url: https://fis-iran.org/document/constitution-of-the-islamic-republic-of-iran/
+  source_date: '1979'
+  locator: Art. 3, 23, 24, 26, 27; Grundrechte und Rechtsvorbehalte
+  limits: Englische Übersetzung; persischen Originalwortlaut unabhängig prüfen
+  verified_by: Webabruf in dieser Forschungsrunde
+  verification_status: web_read
+  raw_archived: false
+  raw_sha256: null
+  independent_quote_review: false
+- id: IR02
+  country: Iran
+  source_type: official_data_republished
+  title: 'Iran Data Portal: Referenda'
+  url: https://irandataportal.syr.edu/referenda/
+  source_date: 1979; Portalabruf 2026
+  locator: Zwei Referenden getrennt; Teilnehmer, Berechtigte, Beteiligung
+  limits: Basiert laut Portal auf Angaben des iranischen Innenministeriums, nicht unabhängig bestätigt
+  verified_by: Webabruf in dieser Forschungsrunde
+  verification_status: web_read
+  raw_archived: false
+  raw_sha256: null
+  independent_quote_review: false
+- id: IR03
+  country: Iran
+  source_type: official_data_republished
+  title: 'Iran Data Portal: Assembly of Experts election 1979'
+  url: https://irandataportal.syr.edu/the-1979-assembly-of-experts-for-the-drafting-of-the-constitution-election
+  source_date: 03.08.1979
+  locator: 10.784.932 Teilnehmer / 20.857.391 Berechtigte
+  limits: Datenbasis iranische Ministerien
+  verified_by: Webabruf in dieser Forschungsrunde
+  verification_status: web_read
+  raw_archived: false
+  raw_sha256: null
+  independent_quote_review: false
+- id: IR04
+  country: Iran
+  source_type: scholarly_secondary
+  title: 'Encyclopaedia Iranica: Āyandagān'
+  url: https://www.iranicaonline.org/articles/ayandagan-newspaper/
+  source_date: Artikel 1987, aktualisiert 2016
+  locator: Schließung der unabhängigen Tageszeitung, 07.08.1979
+  limits: 'Keine zeitgenössische Primärquelle: historische Fachinterpretation'
+  verified_by: Webabruf in dieser Forschungsrunde
+  verification_status: web_read
+  raw_archived: false
+  raw_sha256: null
+  independent_quote_review: false
+- id: IR05
+  country: Iran
+  source_type: scholarly_secondary
+  title: 'Encyclopaedia Iranica: Iranian History, chronology part 4'
+  url: https://www.iranicaonline.org/articles/chronology-of-iranian-history-part-4/?generate_pdf=1
+  source_date: chronologisch 1974–1984
+  locator: 1983 Verfolgung und Verbot der Tudeh-Partei
+  limits: Sekundärchronologie; spezifische Arrestzahlen nicht als unabhängig verifiziert verwenden
+  verified_by: Webabruf in dieser Forschungsrunde
+  verification_status: web_read
+  raw_archived: false
+  raw_sha256: null
+  independent_quote_review: false
+- id: HU01
+  country: Ungarn
+  source_type: observation
+  title: ODIHR Assessment 2010
+  url: https://odihr.osce.org/odihr/elections/hungary/117819
+  source_date: 11.04.2010; Abschlussbericht 2010
+  locator: 2010 pluralistische Wahl; überwiegend gleiche Bedingungen
+  limits: Beobachterbewertung; keine Aussage über jede Einzelregel
+  verified_by: Webabruf in dieser Forschungsrunde
+  verification_status: web_read
+  raw_archived: false
+  raw_sha256: null
+  independent_quote_review: false
+- id: HU02
+  country: Ungarn
+  source_type: primary
+  title: Ungarisches Grundgesetz 2011 (amtliche Bekanntmachung)
+  url: https://2010-2014.kormany.hu/en/news/the-new-fundamental-law-of-hungary-has-been-published
+  source_date: 18.04.2011, wirksam 01.01.2012
+  locator: Erlass Grundgesetz; Verfassungsvorgang
+  limits: Originalfassung als herunterladbares Gesetz zusätzlich nachbeschaffen
+  verified_by: Webabruf in dieser Forschungsrunde
+  verification_status: web_read
+  raw_archived: false
+  raw_sha256: null
+  independent_quote_review: false
+- id: HU03
+  country: Ungarn
+  source_type: observation
+  title: 'OSZE PA / ODIHR: 2026 preliminary findings'
+  url: https://www.oscepa.org/en/news-a-media/press-releases/2026/hungarys-parliamentary-elections-vibrant-but-no-equal-opportunities-for-contestants-international-observers-say
+  source_date: 13.04.2026
+  locator: Echte Wahlchance, aber ungleiche Wettbewerbsbedingungen und Medienungleichheit
+  limits: 'Vorläufige Erklärung: Schlussbericht gegenprüfen'
+  verified_by: Webabruf in dieser Forschungsrunde
+  verification_status: web_read
+  raw_archived: false
+  raw_sha256: null
+  independent_quote_review: false
+- id: HU04
+  country: Ungarn
+  source_type: official_statistics
+  title: 'IPU Parline: Wahl Ungarn 2026'
+  url: https://data.ipu.org/parliament/HU/HU-LC01/election/HU-LC01-E20260412/
+  source_date: 12.04.2026
+  locator: 199 Sitze, 141 TISZA, 52 Fidesz-KDNP, 6 Mi Hazánk, 79,6%
+  limits: Quellenvariante der nationalen Wahlkommission ergänzen
+  verified_by: Webabruf in dieser Forschungsrunde
+  verification_status: web_read
+  raw_archived: false
+  raw_sha256: null
+  independent_quote_review: false
+- id: HU05
+  country: Ungarn
+  source_type: official_report
+  title: 'Europäische Kommission: Rule of Law Report Hungary 2026'
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A52026SC0917
+  source_date: 17.07.2026
+  locator: Reforminitiativen, verbleibende Probleme im Rechtsstaat
+  limits: Bericht unter neuer Regierung; nicht als vollständige Konsolidierung interpretieren
+  verified_by: Webabruf in dieser Forschungsrunde
+  verification_status: web_read
+  raw_archived: false
+  raw_sha256: null
+  independent_quote_review: false
+- id: HU06
+  country: Ungarn
+  source_type: academic
+  title: Studie zu den ungarischen Wahlen 2026 (DOI)
+  url: https://doi.org/10.1080/01402382.2026.2741329
+  source_date: '2026'
+  locator: TISZA 53,18% Listenstimmen, Fidesz 38,61%; 79,56% Beteiligung
+  limits: Beteiligung mit IPU 79,6% gerundet vereinbar
+  verified_by: Webabruf in dieser Forschungsrunde
+  verification_status: web_read
+  raw_archived: false
+  raw_sha256: null
+  independent_quote_review: false

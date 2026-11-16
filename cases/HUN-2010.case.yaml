@@ -1,0 +1,151 @@
+schema_version: 2.0.0
+model_version: 3.0.0
+case_id: HUN-2010
+case_status: draft
+title: 'Ungarn 2010–2026: Machtkonzentration und Regierungswechsel'
+research_run_id: RUN-WEB-20261116-PRELIM
+territory: Ungarn
+period:
+  start_year: 2010
+  end_year: 2026
+source_pack_version: unfrozen
+source_pack_sha256: null
+research_question: Wie wirkten institutionelle Veränderungen auf Wettbewerb und Machtwechsel 2026?
+actors: []
+context:
+  political: ''
+  economic_social: ''
+  international: ''
+  baseline_date: '2010-01-01'
+  baseline_description: 'Ausgangslage 2010: OSZE stellte pluralistische Wahl fest; Details und aktuelle Entwicklungen in research/dossiers/UNGARN_2010_2026.md.'
+power_transition:
+  kind: election
+  date: '2010-04-11'
+  description: ''
+  evidence_ids: []
+promises: []
+promise_assessments: []
+claims: []
+freedom_dimensions:
+- id: F1
+  indicators:
+  - id: M01
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  - id: M02
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  - id: M03
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  - id: M10
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  synthesis: ''
+- id: F2
+  indicators:
+  - id: M05
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  - id: M06
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  synthesis: ''
+- id: F3
+  indicators:
+  - id: M04
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  - id: M07
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  synthesis: ''
+- id: F4
+  indicators:
+  - id: M09
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  synthesis: ''
+- id: F5
+  indicators:
+  - id: M08
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  synthesis: ''
+outcomes:
+  summary: ''
+  evidence_ids: []
+  alternative_explanations: []
+  unresolved_questions: []
+dataset_versions: []
+first_coder_id: UNASSIGNED

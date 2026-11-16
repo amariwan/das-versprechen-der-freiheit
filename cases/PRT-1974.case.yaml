@@ -1,0 +1,151 @@
+schema_version: 2.0.0
+model_version: 3.0.0
+case_id: PRT-1974
+case_status: draft
+title: 'Portugal 1974–1976: Revolution und demokratischer Übergang'
+research_run_id: RUN-WEB-20261116-PRELIM
+territory: Portugal
+period:
+  start_year: 1974
+  end_year: 1976
+source_pack_version: unfrozen
+source_pack_sha256: null
+research_question: Wann und durch welche Institutionen überlebten politische Freiheitsversprechen den Militärumsturz?
+actors: []
+context:
+  political: ''
+  economic_social: ''
+  international: ''
+  baseline_date: '1974-01-01'
+  baseline_description: Vor dem Militärumsturz bestand der autoritäre Estado Novo. Details und Primärbelege in research/dossiers/PORTUGAL_1974_1976.md.
+power_transition:
+  kind: mixed
+  date: '1974-04-25'
+  description: ''
+  evidence_ids: []
+promises: []
+promise_assessments: []
+claims: []
+freedom_dimensions:
+- id: F1
+  indicators:
+  - id: M01
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  - id: M02
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  - id: M03
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  - id: M10
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  synthesis: ''
+- id: F2
+  indicators:
+  - id: M05
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  - id: M06
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  synthesis: ''
+- id: F3
+  indicators:
+  - id: M04
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  - id: M07
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  synthesis: ''
+- id: F4
+  indicators:
+  - id: M09
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  synthesis: ''
+- id: F5
+  indicators:
+  - id: M08
+    status: not_assessed
+    direction: unknown
+    baseline: ''
+    followup: ''
+    affected_groups: []
+    rationale: ''
+    evidence_ids: []
+    counterevidence_ids: []
+    evidence_class: U
+  synthesis: ''
+outcomes:
+  summary: ''
+  evidence_ids: []
+  alternative_explanations: []
+  unresolved_questions: []
+dataset_versions: []
+first_coder_id: UNASSIGNED

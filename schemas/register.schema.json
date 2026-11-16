@@ -1,0 +1,158 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "register_version",
+    "updated_at",
+    "sources"
+  ],
+  "properties": {
+    "register_version": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_id",
+          "title",
+          "source_type",
+          "origin_id",
+          "retrieval"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9-]*$"
+          },
+          "title": {
+            "type": "string"
+          },
+          "source_type": {
+            "enum": [
+              "primary",
+              "archive",
+              "academic",
+              "dataset",
+              "news",
+              "other"
+            ]
+          },
+          "origin_id": {
+            "type": "string"
+          },
+          "authors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "published_at": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "archive_id": {
+            "type": "string"
+          },
+          "edition": {
+            "type": "string"
+          },
+          "data_version": {
+            "type": "string"
+          },
+          "license_notes": {
+            "type": "string"
+          },
+          "retrieval": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "run_id",
+              "retrieved_at",
+              "locator",
+              "raw_sha256",
+              "extract_sha256",
+              "raw_path",
+              "extract_path",
+              "archival_scope",
+              "method"
+            ],
+            "properties": {
+              "status": {
+                "enum": [
+                  "retrieved",
+                  "not_retrieved"
+                ]
+              },
+              "run_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "retrieved_at": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "locator": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "raw_sha256": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "extract_sha256": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "raw_path": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "extract_path": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "archival_scope": {
+                "enum": [
+                  "none",
+                  "raw_and_extract",
+                  "extract_only"
+                ]
+              },
+              "method": {
+                "enum": [
+                  "none",
+                  "file",
+                  "https"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "reviewer_id",
+    "quotes"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "reviewer_id": {
+      "type": "string"
+    },
+    "quotes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "promise_id",
+          "verdict",
+          "notes"
+        ],
+        "properties": {
+          "promise_id": {
+            "type": "string"
+          },
+          "verdict": {
+            "enum": [
+              "match",
+              "mismatch"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

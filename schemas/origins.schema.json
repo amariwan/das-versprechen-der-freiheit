@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "origins"
+  ],
+  "properties": {
+    "origins": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "origin_id",
+          "publisher_or_archive",
+          "independence_notes"
+        ],
+        "properties": {
+          "origin_id": {
+            "type": "string"
+          },
+          "publisher_or_archive": {
+            "type": "string"
+          },
+          "independence_notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

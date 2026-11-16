@@ -1,0 +1,161 @@
+model_version: 3.0.0
+title: Das Versprechen der Freiheit
+period:
+  start_year: 1789
+  end_year: 2026
+  evidence_cutoff: '2026-11-16'
+directions:
+- strengthened
+- weakened
+- mixed
+- unchanged
+- unknown
+- not_applicable
+direction_rule:
+  strengthened: Nachweisbarer Zuwachs gegenüber festgelegter Baseline
+  weakened: Nachweisbarer Rückgang gegenüber Baseline
+  mixed: Belegbare gegenläufige Veränderungen innerhalb klar benannter Gruppen, Zeiträume oder Unteraspekte
+  unchanged: Quellen belegen hinreichend, dass keine relevante Veränderung stattfand
+  unknown: Keine ausreichenden oder widersprüchliche Belege
+  not_applicable: Dimension/Code ist für den Prozess nicht sinnvoll anwendbar; begründen
+freedom_definitions:
+- id: F1
+  label: Politische Mitbestimmung
+  observable_indicators: Wahlrecht, Oppositionsrechte, Zugang zu politischen Ämtern, institutionelle
+    Kontrolle
+  boundary_rule: Unterscheide Wahlrecht, Wahlfairness und tatsächliche politische Wirkung.
+  required_distinctions:
+  - de_jure
+  - de_fact
+  - affected_groups
+  - time_window
+  indicators:
+  - id: M01
+    label: Politische Inklusion
+    decision_rule: Ändert sich, wer an politischen Entscheidungen oder Wahlen teilhaben darf?
+    observable_indicators: Stimm-, Kandidatur- und Teilhaberechte; Inklusion muss von bloßer Beteiligungsrhetorik
+      getrennt werden.
+    classification: Vergleich Baseline -> Folgeperiode; Richtung offen
+    boundary_rule: Ohne nachgewiesenen zeitlichen Vergleich und Quellen keine positive oder negative
+      Kodierung; unknown benutzen.
+  - id: M02
+    label: Wettbewerb um Regierungsämter
+    decision_rule: Ändern sich reale Chancen politischer Konkurrenz durch Wahlen oder andere institutionelle
+      Verfahren?
+    observable_indicators: Wahlzugang, fairer Wettbewerb, Zulassung von Gegnern; keine Gleichsetzung
+      einer einzelnen Wahl mit dauerhaftem Wettbewerb.
+    classification: Vergleich Baseline -> Folgeperiode; Richtung offen
+    boundary_rule: Ohne nachgewiesenen zeitlichen Vergleich und Quellen keine positive oder negative
+      Kodierung; unknown benutzen.
+  - id: M03
+    label: Verteilung exekutiver Macht
+    decision_rule: Ändern sich wirksame Kontrollen der Exekutive durch Parlament, Föderalismus oder
+      unabhängige Institutionen?
+    observable_indicators: Kompetenzen, Vetorechte, Kontrollpraxis; reine Verfassungstexte ohne Umsetzung
+      reichen nicht.
+    classification: Vergleich Baseline -> Folgeperiode; Richtung offen
+    boundary_rule: Ohne nachgewiesenen zeitlichen Vergleich und Quellen keine positive oder negative
+      Kodierung; unknown benutzen.
+  - id: M10
+    label: Anerkennung politischer Machtwechsel
+    decision_rule: Ändert sich die tatsächliche Bereitschaft und Fähigkeit der politischen Führung,
+      rechtmäßige Ergebnisse anzuerkennen und Macht friedlich abzugeben?
+    observable_indicators: Tatsächlich erfolgte Amtsübergaben, Anerkennung von Ergebnissen, Übergangsregeln;
+      ausdrücklich keine bloße Wiederholung des Wahlwettbewerbs (M02).
+    classification: Vergleich Baseline -> Folgeperiode; Richtung offen
+    boundary_rule: M02 misst Zugang zum Wettbewerb, M03 kontrollierende Institutionen, M10 das Handeln
+      bei realen Wechseln oder strittigen Ergebnissen.
+- id: F2
+  label: Meinung, Presse und Information
+  observable_indicators: Meinungsäußerung, Presse, öffentliche Kritik, Zugang zu Information
+  boundary_rule: Rechtliche Zusage und praktische Medienvielfalt nicht gleichsetzen.
+  required_distinctions:
+  - de_jure
+  - de_fact
+  - affected_groups
+  - time_window
+  indicators:
+  - id: M05
+    label: Meinungs- und Informationspluralismus
+    decision_rule: Ändern sich Möglichkeiten, öffentliche Informationen zu verbreiten und Regierungspolitik
+      zu kritisieren?
+    observable_indicators: Presse-, Rede- und Informationszugang; rechtliche und faktische Wirkungen
+      unterscheiden.
+    classification: Vergleich Baseline -> Folgeperiode; Richtung offen
+    boundary_rule: Ohne nachgewiesenen zeitlichen Vergleich und Quellen keine positive oder negative
+      Kodierung; unknown benutzen.
+  - id: M06
+    label: Autonomie politischer und ziviler Organisation
+    decision_rule: Ändern sich Möglichkeiten, unabhängige Parteien, Verbände, Gewerkschaften und Bewegungen
+      zu gründen und tätig zu sein?
+    observable_indicators: Zulassung, Registrierung, Überwachung, unabhängige Finanzierung, tatsächliche
+      Tätigkeit.
+    classification: Vergleich Baseline -> Folgeperiode; Richtung offen
+    boundary_rule: Ohne nachgewiesenen zeitlichen Vergleich und Quellen keine positive oder negative
+      Kodierung; unknown benutzen.
+- id: F3
+  label: Persönliche und rechtsstaatliche Freiheit
+  observable_indicators: Schutz vor Willkür, Rechtsbehelf, Freiheit von Zwang, Verfahrensrechte
+  boundary_rule: Einzelne Gesetze nicht mit Vollzug verwechseln.
+  required_distinctions:
+  - de_jure
+  - de_fact
+  - affected_groups
+  - time_window
+  indicators:
+  - id: M04
+    label: Justizielle Unabhängigkeit
+    decision_rule: Ändert sich die tatsächliche Fähigkeit von Gerichten, Regierung und Verwaltung unabhängig
+      zu kontrollieren?
+    observable_indicators: Ernennung, Amtszeit, Verfahren, politischer Druck, Umsetzung von Urteilen.
+    classification: Vergleich Baseline -> Folgeperiode; Richtung offen
+    boundary_rule: Ohne nachgewiesenen zeitlichen Vergleich und Quellen keine positive oder negative
+      Kodierung; unknown benutzen.
+  - id: M07
+    label: Schutz vor staatlicher Willkür
+    decision_rule: Ändert sich der effektive Schutz von Personen vor willkürlicher Inhaftierung, Zwang
+      und rechtswidriger Staatsgewalt?
+    observable_indicators: Rechtsbehelf, Kontrolle des Sicherheitsapparats, Inhaftierungspraktiken;
+      keine pauschale Verrechnung mit Sozialpolitik.
+    classification: Vergleich Baseline -> Folgeperiode; Richtung offen
+    boundary_rule: Ohne nachgewiesenen zeitlichen Vergleich und Quellen keine positive oder negative
+      Kodierung; unknown benutzen.
+- id: F4
+  label: Wirtschaftliche Handlungsfreiheit
+  observable_indicators: Berufs-/Arbeitswahl, Zugang zu Gütern, Besitz- und Nutzungsrechte
+  boundary_rule: Verstaatlichung oder Umverteilung nicht automatisch als Gewinn/Verlust codieren.
+  required_distinctions:
+  - de_jure
+  - de_fact
+  - affected_groups
+  - time_window
+  indicators:
+  - id: M09
+    label: Wirtschaftliche Selbstbestimmung und Zugang
+    decision_rule: Ändern sich reale Möglichkeiten wirtschaftlicher Entscheidung und Zugang zu Ressourcen,
+      Arbeit oder Besitz?
+    observable_indicators: Berufs-/Arbeitswahl, Besitz-/Nutzungsrechte, Machtasymmetrien, Zugang; Verstaatlichung
+      allein impliziert keine Richtung.
+    classification: Vergleich Baseline -> Folgeperiode; Richtung offen
+    boundary_rule: Ohne nachgewiesenen zeitlichen Vergleich und Quellen keine positive oder negative
+      Kodierung; unknown benutzen.
+- id: F5
+  label: Gleichberechtigung und soziale Teilhabe
+  observable_indicators: Gleichstellung, Nichtdiskriminierung, Zugang zu Bildung und Versorgung
+  boundary_rule: Verteilung zwischen Gruppen und Rechtslage vs. Lebensrealität trennen.
+  required_distinctions:
+  - de_jure
+  - de_fact
+  - affected_groups
+  - time_window
+  indicators:
+  - id: M08
+    label: Gleichheit vor dem Recht
+    decision_rule: Ändern sich rechtlicher Status und praktischer Schutz gesellschaftlicher Gruppen?
+    observable_indicators: Rechtsgleichheit, Diskriminierungsverbote und tatsächliche Durchsetzung getrennt
+      erfassen.
+    classification: Vergleich Baseline -> Folgeperiode; Richtung offen
+    boundary_rule: Ohne nachgewiesenen zeitlichen Vergleich und Quellen keine positive oder negative
+      Kodierung; unknown benutzen.
+coding_policy: Only indicator codes have direction; F-dimensions are groupings without duplicate scores
+  or directions.

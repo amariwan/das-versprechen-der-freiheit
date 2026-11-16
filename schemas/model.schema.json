@@ -1,0 +1,124 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "model_version",
+    "title",
+    "period",
+    "directions",
+    "direction_rule",
+    "freedom_definitions",
+    "coding_policy"
+  ],
+  "properties": {
+    "model_version": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "period": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "start_year",
+        "end_year",
+        "evidence_cutoff"
+      ],
+      "properties": {
+        "start_year": {
+          "type": "integer"
+        },
+        "end_year": {
+          "type": "integer"
+        },
+        "evidence_cutoff": {
+          "type": "string"
+        }
+      }
+    },
+    "directions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "direction_rule": {
+      "type": "object"
+    },
+    "freedom_definitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "label",
+          "observable_indicators",
+          "boundary_rule",
+          "required_distinctions",
+          "indicators"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "observable_indicators": {
+            "type": "string"
+          },
+          "boundary_rule": {
+            "type": "string"
+          },
+          "required_distinctions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "indicators": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "label",
+                "decision_rule",
+                "observable_indicators",
+                "classification",
+                "boundary_rule"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "decision_rule": {
+                  "type": "string"
+                },
+                "observable_indicators": {
+                  "type": "string"
+                },
+                "classification": {
+                  "type": "string"
+                },
+                "boundary_rule": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "coding_policy": {
+      "type": "string"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

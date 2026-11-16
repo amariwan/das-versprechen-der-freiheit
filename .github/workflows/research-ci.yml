@@ -1,0 +1,47 @@
+name: Forschungsprüfung
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      case_id:
+        description: Fall-ID für human-gated Release (leer = nur Tests)
+        required: false
+        type: string
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: python scripts/render_codebook.py --check
+      - run: python scripts/validate.py
+      - run: python -m unittest discover -s tests -v
+  release:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && inputs.case_id != ''
+    needs: validate
+    runs-on: ubuntu-latest
+    environment: historical-release  # MUST configure required human reviewers in GitHub UI
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - name: Emit reviewed release attestation
+        env:
+          HUMAN_REVIEW_ENV_SECRET: ${{ secrets.HUMAN_REVIEW_ENV_SECRET }}
+          CASE_ID: ${{ inputs.case_id }}
+        run: python scripts/release.py "$CASE_ID"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: historical-approval-${{ inputs.case_id }}
+          path: releases/*.approved.json

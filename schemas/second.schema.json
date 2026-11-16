@@ -1,0 +1,75 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "coder_id",
+    "source_pack_sha256",
+    "dimensions"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "coder_id": {
+      "type": "string"
+    },
+    "source_pack_sha256": {
+      "type": "string"
+    },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "indicators"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "indicators": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "direction",
+                "rationale",
+                "evidence_ids"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "direction": {
+                  "enum": [
+                    "strengthened",
+                    "weakened",
+                    "mixed",
+                    "unchanged",
+                    "unknown",
+                    "not_applicable"
+                  ]
+                },
+                "rationale": {
+                  "type": "string"
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

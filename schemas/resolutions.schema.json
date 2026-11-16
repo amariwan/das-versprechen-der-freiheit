@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "resolved_by",
+    "differences"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "resolved_by": {
+      "type": "string"
+    },
+    "differences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "code_id",
+          "decision",
+          "reason",
+          "supporting_ids"
+        ],
+        "properties": {
+          "code_id": {
+            "type": "string"
+          },
+          "decision": {
+            "enum": [
+              "strengthened",
+              "weakened",
+              "mixed",
+              "unchanged",
+              "unknown",
+              "not_applicable"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "supporting_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

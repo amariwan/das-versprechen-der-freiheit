@@ -1,0 +1,487 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "model_version",
+    "case_id",
+    "case_status",
+    "first_coder_id",
+    "title",
+    "research_run_id",
+    "territory",
+    "period",
+    "source_pack_version",
+    "source_pack_sha256",
+    "research_question",
+    "actors",
+    "context",
+    "power_transition",
+    "promises",
+    "promise_assessments",
+    "claims",
+    "freedom_dimensions",
+    "outcomes",
+    "dataset_versions"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "2.0.0"
+    },
+    "model_version": {
+      "type": "string"
+    },
+    "case_id": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9-]*$"
+    },
+    "case_status": {
+      "enum": [
+        "draft",
+        "under_review"
+      ]
+    },
+    "first_coder_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "research_run_id": {
+      "type": "string"
+    },
+    "territory": {
+      "type": "string"
+    },
+    "period": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "start_year",
+        "end_year"
+      ],
+      "properties": {
+        "start_year": {
+          "type": "integer",
+          "minimum": 1789,
+          "maximum": 2026
+        },
+        "end_year": {
+          "type": "integer",
+          "minimum": 1789,
+          "maximum": 2026
+        }
+      }
+    },
+    "source_pack_version": {
+      "type": "string"
+    },
+    "source_pack_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "research_question": {
+      "type": "string"
+    },
+    "actors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "actor_id",
+          "name",
+          "ideology_assessed",
+          "evidence_ids"
+        ],
+        "properties": {
+          "actor_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "ideology_assessed": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "political",
+        "economic_social",
+        "international",
+        "baseline_date",
+        "baseline_description"
+      ],
+      "properties": {
+        "political": {
+          "type": "string"
+        },
+        "economic_social": {
+          "type": "string"
+        },
+        "international": {
+          "type": "string"
+        },
+        "baseline_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "baseline_description": {
+          "type": "string"
+        }
+      }
+    },
+    "power_transition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "date",
+        "description",
+        "evidence_ids"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "election",
+            "revolution",
+            "coup",
+            "negotiated",
+            "appointment",
+            "succession",
+            "mixed",
+            "other",
+            "unknown"
+          ]
+        },
+        "date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "promises": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "promise_id",
+          "actor_id",
+          "date",
+          "assertion_type",
+          "wording",
+          "original_language",
+          "source_id",
+          "locator"
+        ],
+        "properties": {
+          "promise_id": {
+            "type": "string"
+          },
+          "actor_id": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "assertion_type": {
+            "enum": [
+              "direct_quote",
+              "paraphrase"
+            ]
+          },
+          "wording": {
+            "type": "string"
+          },
+          "original_language": {
+            "type": "string"
+          },
+          "source_id": {
+            "type": "string"
+          },
+          "locator": {
+            "type": "string"
+          },
+          "translation_de": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "promise_assessments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "promise_id",
+          "assessment",
+          "actor_continuity",
+          "rationale",
+          "evidence_ids",
+          "evidence_class"
+        ],
+        "properties": {
+          "promise_id": {
+            "type": "string"
+          },
+          "assessment": {
+            "enum": [
+              "fulfilled",
+              "partly_fulfilled",
+              "contradicted",
+              "unresolved"
+            ]
+          },
+          "actor_continuity": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence_class": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "U"
+            ]
+          }
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim_id",
+          "text",
+          "claim_type",
+          "evidence_class",
+          "source_ids",
+          "temporal_scope"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "claim_type": {
+            "enum": [
+              "fact",
+              "interpretation",
+              "causal_hypothesis"
+            ]
+          },
+          "evidence_class": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "U"
+            ]
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "temporal_scope": {
+            "type": "string"
+          },
+          "data_version": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "freedom_dimensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "indicators"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "indicators": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "status",
+                "direction",
+                "baseline",
+                "followup",
+                "affected_groups",
+                "rationale",
+                "evidence_ids",
+                "counterevidence_ids",
+                "evidence_class"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "status": {
+                  "enum": [
+                    "not_assessed",
+                    "assessed",
+                    "not_applicable"
+                  ]
+                },
+                "direction": {
+                  "enum": [
+                    "strengthened",
+                    "weakened",
+                    "mixed",
+                    "unchanged",
+                    "unknown",
+                    "not_applicable"
+                  ]
+                },
+                "baseline": {
+                  "type": "string"
+                },
+                "followup": {
+                  "type": "string"
+                },
+                "affected_groups": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "rationale": {
+                  "type": "string"
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "counterevidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "evidence_class": {
+                  "enum": [
+                    "A",
+                    "B",
+                    "C",
+                    "D",
+                    "U"
+                  ]
+                }
+              }
+            }
+          },
+          "synthesis": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "outcomes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "summary",
+        "evidence_ids",
+        "alternative_explanations",
+        "unresolved_questions"
+      ],
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "alternative_explanations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "unresolved_questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "dataset_versions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "release"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "release": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

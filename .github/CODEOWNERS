@@ -1,0 +1,9 @@
+# Replace/add independent historian reviewer(s) before using this on a shared repo.
+* @amariwan
+/.github/ @amariwan
+/config/ @amariwan
+/schemas/ @amariwan
+/scripts/ @amariwan
+/sources/ @amariwan
+/cases/ @amariwan
+/reviews/ @amariwan
